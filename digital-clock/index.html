@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Clock | Muzahidul Islam</title>
+
+    <meta name="description" content="A responsive real-time digital clock for Dhaka with 12/24-hour format and light/dark themes. Built with HTML, CSS and JavaScript.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b14'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3EM%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <a class="back-link" href="../index.html#projects">&larr; Back to portfolio</a>
+
+    <main class="clock-container">
+
+        <div class="clock-card">
+
+            <!-- TOP BAR -->
+
+            <div class="top-bar">
+
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    MUZAHIDUL ISLAM
+                </div>
+
+                <button
+                    id="themeToggle"
+                    aria-label="Switch between light and dark theme"
+                    class="icon-btn"
+                    aria-label="Toggle theme">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="heading">
+
+                <p class="label">
+                    LIVE TIME
+                </p>
+
+                <h1>
+                    Digital Clock
+                </h1>
+
+                <p class="location">
+                    📍 Dhaka, Bangladesh
+                </p>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div
+                class="date"
+                id="date">
+
+                Loading date...
+
+            </div>
+
+
+            <!-- TIME -->
+
+            <div
+                class="time"
+                id="time">
+
+                00:00:00
+
+            </div>
+
+
+            <!-- PERIOD -->
+
+            <div
+                class="period"
+                id="period">
+
+                AM
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="controls">
+
+                <button
+                    id="formatToggle"
+                    class="control-btn">
+
+                    24 Hour
+
+                </button>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="clock-footer">
+
+                <span>
+
+                    <span class="status-dot"></span>
+
+                    Live Time
+
+                </span>
+
+                <span id="timezone">
+                    Asia/Dhaka
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
