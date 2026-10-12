@@ -3168,3 +3168,82 @@ button:focus-visible {
 .hero-section {
     padding-top: 90px;
 }
+
+
+/* ===== PREMIUM HERO ENHANCEMENTS ===== */
+
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(59, 130, 246, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(139, 92, 246, 0.09),
+            transparent 32%
+        );
+}
+
+.hero-title {
+    letter-spacing: -0.045em;
+    line-height: 1.08;
+}
+
+.hero-title span {
+    background: linear-gradient(
+        110deg,
+        #60a5fa 0%,
+        #a78bfa 55%,
+        #67e8f9 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    max-width: 570px;
+    line-height: 1.85;
+}
+
+.btn-main,
+.btn-outline {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.24);
+}
+
+.btn-outline:hover {
+    transform: translateY(-3px);
+}
+
+.hero-social a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.hero-social a:hover {
+    transform: translateY(-3px);
+    color: #60a5fa;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-main,
+    .btn-outline,
+    .hero-social a {
+        transition: none;
+    }
+}
+
