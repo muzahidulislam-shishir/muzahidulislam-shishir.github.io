@@ -3247,3 +3247,62 @@ button:focus-visible {
     }
 }
 
+
+/* ===== PREMIUM PROFILE CARD ===== */
+
+.profile-wrapper {
+    position: relative;
+    isolation: isolate;
+}
+
+.profile-card {
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 24px;
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.22),
+        0 0 35px rgba(96, 165, 250, 0.06);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.35);
+}
+
+.floating-card {
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.5);
+}
+
+@media (max-width: 991.98px) {
+    .profile-wrapper {
+        margin-top: 35px;
+    }
+
+    .profile-card {
+        max-width: 420px;
+        margin-inline: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-card,
+    .floating-card {
+        transition: none;
+    }
+}
+
