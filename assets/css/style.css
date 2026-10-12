@@ -3487,3 +3487,50 @@ button:focus-visible {
         transform: none;
     }
 }
+
+
+/* ===== PREMIUM NAVBAR ===== */
+
+.navbar {
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(7, 11, 20, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #60a5fa;
+}
+
+.navbar .nav-btn {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.navbar .nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .navbar .nav-link,
+    .navbar .nav-btn {
+        transition: none;
+    }
+}
+
