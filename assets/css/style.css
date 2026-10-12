@@ -3391,3 +3391,99 @@ button:focus-visible {
         transform: none;
     }
 }
+
+
+/* ===== PREMIUM ABOUT & SKILLS ===== */
+
+.stats-grid {
+    gap: 18px;
+}
+
+.stat-card {
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 18px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    transition: transform 0.25s ease;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.08);
+}
+
+.about-large {
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+}
+
+.about-text {
+    line-height: 1.85;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.text-link:hover {
+    gap: 13px;
+    color: #60a5fa;
+}
+
+/* Skills cards */
+
+.skill-card,
+.skill-item {
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.skill-card:hover,
+.skill-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+@media (max-width: 575.98px) {
+    .stats-grid {
+        gap: 12px;
+    }
+
+    .about-large,
+    .about-text {
+        line-height: 1.75;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stat-card,
+    .stat-icon,
+    .text-link,
+    .skill-card,
+    .skill-item {
+        transition: none;
+    }
+
+    .stat-card:hover,
+    .stat-icon,
+    .skill-card:hover,
+    .skill-item:hover {
+        transform: none;
+    }
+}
