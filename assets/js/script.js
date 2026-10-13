@@ -65,3 +65,42 @@ if (previewClock) {
     tick();
     setInterval(tick, 1000);
 }
+
+
+// ---- Subtle custom cursor (desktop / fine pointer only) ----
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(pointer: fine)").matches &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const cursor = document.createElement("span");
+        const ring = document.createElement("span");
+        cursor.className = "custom-cursor-dot";
+        ring.className = "custom-cursor-ring";
+        cursor.setAttribute("aria-hidden", "true");
+        ring.setAttribute("aria-hidden", "true");
+        document.body.append(cursor, ring);
+
+        let x = window.innerWidth / 2, y = window.innerHeight / 2;
+        let rx = x, ry = y;
+        document.addEventListener("mousemove", (event) => {
+            x = event.clientX; y = event.clientY;
+            cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        }, { passive: true });
+
+        const animateRing = () => {
+            rx += (x - rx) * 0.18;
+            ry += (y - ry) * 0.18;
+            ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
+            requestAnimationFrame(animateRing);
+        };
+        animateRing();
+
+        document.querySelectorAll("a, button, input, textarea, select, [role='button']").forEach(el => {
+            el.addEventListener("mouseenter", () => ring.classList.add("is-hovering"));
+            el.addEventListener("mouseleave", () => ring.classList.remove("is-hovering"));
+        });
+    }
+});
+
+// Respect reduced-motion preferences and smooth in-page navigation.
+document.documentElement.style.scrollBehavior =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
