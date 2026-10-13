@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover everyday essentials at NOVA MARKET. Shop tech, style and lifestyle products.">
+  <title>NOVA MARKET | Shop Smarter</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    Free shipping on orders over $50
+  </div>
+
+  <header class="site-header">
+    <a href="#" class="logo">NOVA<span>MARKET</span></a>
+
+    <nav class="navigation" id="navigation">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle"
+        aria-label="Focus product search">⌕</button>
+      <button class="cart-button" id="cart-button">
+        Cart <span id="cart-count">0</span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">THE EVERYDAY EDIT</p>
+        <h1>Everyday essentials.<br><span>Better design.</span></h1>
+        <p class="hero-description">
+          Thoughtful products for the way you live, work and explore.
+          Discover your next everyday favorite.
+        </p>
+        <a href="#products" class="primary-button">Shop collection ↗</a>
+        <p class="hero-note">Curated finds. Timeless style. Made for you.</p>
+      </div>
+
+      <div class="hero-art" role="img"
+        aria-label="A curated collection of lifestyle products">
+        <div class="hero-circle"></div>
+        <div class="hero-label">NEW SEASON<br>NEW FAVORITES</div>
+        <div class="hero-emoji hero-emoji-one">🎧</div>
+        <div class="hero-emoji hero-emoji-two">⌚</div>
+        <div class="hero-emoji hero-emoji-three">🎒</div>
+        <div class="hero-emoji hero-emoji-four">👟</div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE YOUR STYLE</p>
+          <h2>Shop by category</h2>
+        </div>
+        <p>Find something made for you.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card active" data-category="All">
+          <span>✳</span><strong>All products</strong>
+        </button>
+        <button class="category-card" data-category="Tech">
+          <span>⌘</span><strong>Tech</strong>
+        </button>
+        <button class="category-card" data-category="Style">
+          <span>✧</span><strong>Style</strong>
+        </button>
+        <button class="category-card" data-category="Accessories">
+          <span>◇</span><strong>Accessories</strong>
+        </button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE GOOD STUFF</p>
+          <h2>Featured products</h2>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="product-search" type="search"
+            placeholder="Search products..." aria-label="Search products">
+        </label>
+      </div>
+
+      <p class="result-count" id="result-count"></p>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="empty-message" id="empty-message" hidden>
+        No products found. Try another search.
+      </p>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">A LITTLE SOMETHING EXTRA</p>
+      <h2>Good finds, straight to your inbox.</h2>
+      <p>Join our newsletter for new arrivals and curated picks.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email"
+          placeholder="Your email address" aria-label="Your email address"
+          required>
+        <button class="primary-button" type="submit">Sign me up</button>
+      </form>
+      <p id="newsletter-message" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  
+<footer class="site-footer">
+  <a href="#home" class="logo">NOVA<span>MARKET</span></a>
+
+  <p>
+    Designed with care. ©
+    <span id="current-year"></span> NOVA MARKET.
+  </p>
+
+  <a href="https://muzahidulislam-shishir.github.io/"
+     target="_blank"
+     rel="noopener noreferrer">
+    My Portfolio ↗
+  </a>
+
+  <a href="#home">Back to top ↑</a>
+</footer>
+
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
